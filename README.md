@@ -1,2 +1,2 @@
-# Ecospherical-Expansion
- Expanding the ecosphere!
+# Glowing-Ores
+ Making ores emit light!
