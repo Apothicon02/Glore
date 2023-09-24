@@ -1,4 +1,4 @@
-package com.Apothic0n.mixin;
+package com.Apothic0n.GlowingOres.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.minecraft.world.level.block.Blocks;
