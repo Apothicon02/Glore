@@ -39,7 +39,7 @@ loom {
 
 }
 loom {
-    
+    accessWidenerPath = file("src/main/resources/glore.accesswidener")
 }
 
 dependencies {
