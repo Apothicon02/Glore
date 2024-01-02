@@ -28,6 +28,8 @@ public class GlowingOres {
             addLight(Blocks.DEEPSLATE_GOLD_ORE.getStateDefinition().getPossibleStates(), 10);
             addLight(Blocks.LAPIS_ORE.getStateDefinition().getPossibleStates(), 7);
             addLight(Blocks.DEEPSLATE_LAPIS_ORE.getStateDefinition().getPossibleStates(), 7);
+            addLight(Blocks.COPPER_ORE.getStateDefinition().getPossibleStates(), 7);
+            addLight(Blocks.DEEPSLATE_COPPER_ORE.getStateDefinition().getPossibleStates(), 7);
             addLight(Blocks.IRON_ORE.getStateDefinition().getPossibleStates(), 4);
             addLight(Blocks.IRON_ORE.getStateDefinition().getPossibleStates(), 4);
             addLight(Blocks.COAL_ORE.getStateDefinition().getPossibleStates(), 4);
