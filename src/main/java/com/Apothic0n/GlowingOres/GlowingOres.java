@@ -31,9 +31,9 @@ public class GlowingOres {
             addLight(Blocks.COPPER_ORE.getStateDefinition().getPossibleStates(), 7);
             addLight(Blocks.DEEPSLATE_COPPER_ORE.getStateDefinition().getPossibleStates(), 7);
             addLight(Blocks.IRON_ORE.getStateDefinition().getPossibleStates(), 4);
-            addLight(Blocks.IRON_ORE.getStateDefinition().getPossibleStates(), 4);
+            addLight(Blocks.DEEPSLATE_IRON_ORE.getStateDefinition().getPossibleStates(), 4);
             addLight(Blocks.COAL_ORE.getStateDefinition().getPossibleStates(), 4);
-            addLight(Blocks.COAL_ORE.getStateDefinition().getPossibleStates(), 4);
+            addLight(Blocks.DEEPSLATE_COAL_ORE.getStateDefinition().getPossibleStates(), 4);
         });
     }
 
