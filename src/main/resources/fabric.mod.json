@@ -20,9 +20,6 @@
     ]
   },
   "mixins": [
-    {
-      "config": "glore.mixins.json"
-    }
   ],
   "accessWidener" : "glore.accesswidener",
   "depends": {
