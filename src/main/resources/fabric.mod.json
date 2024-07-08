@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "glore",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "name": "Glowing ores",
   "description": "Making ores emit light!",
   "authors": [
@@ -20,6 +20,7 @@
     ]
   },
   "mixins": [
+      "mixins.glore.json"
   ],
   "accessWidener" : "glore.accesswidener",
   "depends": {

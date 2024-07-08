@@ -12,11 +12,13 @@ import java.util.Map;
 
 public class GloreJsonReader {
     public static Map<String, Integer> customBlocks;
+    public static Map<String, Integer> customTrims;
     public static void main() throws Exception {
         makeConfig(Path.of(FabricLoader.getInstance().getConfigDir() + "/glore.json"));
+        makeTrimsConfig(Path.of(FabricLoader.getInstance().getConfigDir() + "/glore_trims.json"));
     }
 
-    private static void makeConfig(Path path) throws IOException {
+    public static void makeConfig(Path path) throws IOException {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         if (!Files.exists(path)) {
             Files.write(path, ("{\n" +
@@ -43,5 +45,22 @@ public class GloreJsonReader {
         data.asMap().forEach((block, brightness) -> tempCustomBlocks.put(block, brightness.getAsInt()));
 
         customBlocks = tempCustomBlocks;
+    }
+
+    public static void makeTrimsConfig(Path path) throws IOException {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        if (!Files.exists(path)) {
+            Files.write(path, ("{\n" +
+                    "  \"amethyst\":4,\n" +
+                    "  \"redstone\":2\n" +
+                    "}").getBytes());
+        }
+        JsonReader reader = new JsonReader(new FileReader(path.toString()));
+        JsonObject data = gson.fromJson(reader, JsonObject.class);
+
+        Map<String, Integer> tempCustomTrims = new java.util.HashMap<>(Map.of());
+        data.asMap().forEach((trim, brightness) -> tempCustomTrims.put(trim, brightness.getAsInt()));
+
+        customTrims = tempCustomTrims;
     }
 }
