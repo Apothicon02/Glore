@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.apothicon.glore.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "IrisItemLightProviderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1,
+    "maxShiftBy": 2
+  }
+}
