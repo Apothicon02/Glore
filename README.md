@@ -1,2 +1,2 @@
-# Glowing-Ores
+# Glore
  Making ores emit light!
