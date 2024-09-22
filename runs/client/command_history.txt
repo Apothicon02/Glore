@@ -1,2 +1,0 @@
-/gamemode spectator
-/gamemode creative
