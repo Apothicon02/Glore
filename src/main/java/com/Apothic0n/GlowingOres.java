@@ -19,7 +19,7 @@ public class GlowingOres implements ModInitializer {
         }
         //customBlocks.forEach((block, brightness) -> BuiltInRegistries.BLOCK.get(ResourceLocation.parse(block)).getStateDefinition().getPossibleStates().forEach((state -> state.lightEmission = brightness)));
         customBlocks.forEach((block, brightness) -> {
-            Block registeredBlock = BuiltInRegistries.BLOCK.get(ResourceLocation.parse(block));
+            Block registeredBlock = BuiltInRegistries.BLOCK.get(ResourceLocation.parse(block)).get().value();
             if (registeredBlock == Blocks.AIR) {
                 throw new RuntimeException("Could not locate "+block+", this could be due to a typo in the block name or the mod the block is added by being incompatible with Glore's method of making blocks emit light.");
             } else {
