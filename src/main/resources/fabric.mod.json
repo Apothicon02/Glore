@@ -16,16 +16,16 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.Apothic0n.GlowingOres"
+      "com.apothicon.GlowingOres"
     ]
   },
   "mixins": [
       "mixins.glore.json"
   ],
-  "accessWidener" : "glore.accesswidener",
+  "accessWidener" : "glore.classTweaker",
   "depends": {
-    "fabricloader": ">=0.14.22",
-    "minecraft": ">=1.21",
+    "fabricloader": ">=0.18.5",
+    "minecraft": ">=26.1",
     "java": ">=21"
   },
   "suggests": {

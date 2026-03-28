@@ -1,8 +1,10 @@
-package com.Apothic0n.mixin;
+package com.apothicon.mixin;
 
-import com.Apothic0n.GloreJsonReader;
+import com.apothicon.GloreJsonReader;
 import net.irisshaders.iris.api.v0.item.IrisItemLightProvider;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.entity.SlotAccess;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.equipment.trim.ArmorTrim;
@@ -28,17 +30,20 @@ public interface IrisItemLightProviderMixin {
     @Unique
     private int getTrimGlow(Player player) {
         AtomicInteger returnValue = new AtomicInteger();
-        player.getArmorSlots().forEach((ItemStack stack) -> {
-            ArmorTrim trim = stack.getComponents().get(DataComponents.TRIM);
-            if (trim != null) {
-                String trimName = trim.material().getRegisteredName();
-                GloreJsonReader.customTrims.forEach((string, brightness) -> {
-                    if (trimName.contains(string)) {
-                        returnValue.addAndGet(brightness);
-                    }
-                });
-            }
-        });
+        Inventory.EQUIPMENT_SLOT_MAPPING.keySet().forEach((int slot) -> checkSlot(player.getInventory().getSlot(slot), returnValue));
         return returnValue.get();
+    }
+
+    @Unique
+    private void checkSlot(SlotAccess slot, AtomicInteger returnValue) {
+        ArmorTrim trim = slot.get().getComponents().get(DataComponents.TRIM);
+        if (trim != null) {
+            String trimName = trim.material().getRegisteredName();
+            GloreJsonReader.customTrims.forEach((string, brightness) -> {
+                if (trimName.contains(string)) {
+                    returnValue.addAndGet(brightness);
+                }
+            });
+        }
     }
 }

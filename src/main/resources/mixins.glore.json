@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.Apothic0n.mixin",
+  "package": "com.apothicon.mixin",
   "compatibilityLevel": "JAVA_8",
   "client": [
     "IrisItemLightProviderMixin"

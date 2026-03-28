@@ -1,4 +1,4 @@
-package com.Apothic0n;
+package com.apothicon;
 
 import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
